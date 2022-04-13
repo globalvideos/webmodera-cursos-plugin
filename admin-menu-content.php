@@ -14,7 +14,7 @@ function nota_prova($id, $prova) {
 	if($result) {
 		return $result . "%";	
 	} else {
-		return "";
+		return "-";
 	}
 
 }
@@ -33,7 +33,7 @@ function acesso_pagina($id, $url) {
 	if($result) {
 		return "Sim";	
 	} else {
-		return "";
+		return "-";
 	}
 
 	
@@ -161,7 +161,7 @@ function global_admin_page()
 				$time = get_user_meta($user->ID, 'wp-last-login',true);
 
 				if($time == 0){
-					$date = "Nunca";
+					$date = "-";
 				} else {
 					$date = gmdate("d/m/Y H:i:s", get_user_meta($user->ID, 'wp-last-login',true));
 				}
