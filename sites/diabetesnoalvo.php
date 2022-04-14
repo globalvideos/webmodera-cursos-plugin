@@ -24,21 +24,21 @@ function global_admin_page()
 				'cidade', 
 				'telefone', 
 				'ultimo login',
-				'CGM Mód 1-2021', 
+				'CGM Mód 1-21', 
 				'Prova 1',
-				'CGM Mód 2-2021', 
+				'CGM Mód 2-21', 
 				'Prova 2',
-				'CGM Mód 3-2021', 
+				'CGM Mód 3-21', 
 				'Prova 3',
-				'CGM Mód 4-2021', 
+				'CGM Mód 4-21', 
 				'Prova 4',
-				'CGM Mód 5-2021', 
+				'CGM Mód 5-21', 
 				'Prova 5',
-				'CGM Mód 6-2021',
+				'CGM Mód 6-21',
 				'Prova 6',
-				'Diabetes no Alvo - 2021',
-				'CGM Mód 1-2022',
-				'PMAPD Mód 1-2022'
+				'Diabetes no Alvo - 21',
+				'CGM Mód 1-22',
+				'PMAPD Mód 1-22'
 			);
 
 			fputcsv($outstream, $fields);

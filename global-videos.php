@@ -3,7 +3,7 @@
 Plugin Name: Global Videos (CURSOS)
 Plugin URI: https://www.globalvideos.com.br
 description: Plugins para os sites de cursos
-Version: 1.0.4
+Version: 1.0.5
 Author: Global Videos
 Author URI: https://www.globalvideos.com.br
 License: GPL2
