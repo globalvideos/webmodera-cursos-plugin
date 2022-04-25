@@ -54,7 +54,7 @@ function global_countdown($atts)
     $cidade = get_user_meta($current_user->ID, "cidade", true);
     $uf = get_user_meta($current_user->ID, "uf", true);
     $email = $current_user->user_email;
-    $url = get_site_url();
+    $url = 'https://aovivo.' . parse_url( get_site_url(), PHP_URL_HOST ) );
 
     echo do_shortcode('[ujicountdown id="kollagenase2018" expire="' . $atts['data'] . '" hide="true" url="'  . $url . '/?live=' . $atts['live'] . '&nome=' . $nome .  '&cidade=' . $cidade .  '&uf=' . $uf .  '&email=' . $email . '" subscr="" recurring="2" rectype="second" repeats=""]');
 	

@@ -3,7 +3,7 @@
 Plugin Name: Global Videos (CURSOS)
 Plugin URI: https://www.globalvideos.com.br
 description: Plugins para os sites de cursos
-Version: 1.0.6
+Version: 1.0.7
 Author: Global Videos
 Author URI: https://www.globalvideos.com.br
 License: GPL2
@@ -11,7 +11,7 @@ License: GPL2
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/globalvideos/webmodera-cursos',
+	'https://github.com/globalvideos/webmodera-cursos-plugin',
 	__FILE__,
 	'global-videos'
 );
@@ -21,7 +21,7 @@ $myUpdateChecker->setBranch('main');
 function create_acesso_table()
 {      
 	global $wpdb; 
-	$db_table_name = $wpdb->prefix . 'acesso_gravado2';
+	$db_table_name = $wpdb->prefix . 'acesso_gravado';
 	$charset_collate = $wpdb->get_charset_collate();
 
 	if($wpdb->get_var( "show tables like '$db_table_name'" ) != $db_table_name ) 
