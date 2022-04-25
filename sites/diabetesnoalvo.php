@@ -38,7 +38,8 @@ function global_admin_page()
 				'Prova 6',
 				'Diabetes no Alvo - 21',
 				'CGM Mód 1-22',
-				'PMAPD Mód 1-22'
+				'PMAPD Mód 1-22',
+				'CGM Mód 2-22'
 			);
 
 			fputcsv($outstream, $fields);
@@ -81,6 +82,7 @@ function global_admin_page()
 					acesso_pagina($user->ID, "diabetes-no-alvo-edicao-2021"),
 					acesso_pagina($user->ID, "cgm-masters-m1-2022"),
 					acesso_pagina($user->ID, "paapcd-m1-2022"),
+					acesso_pagina($user->ID, "cgm-masters-m2-2022"),
 				);
 			};
 
