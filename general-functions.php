@@ -19,11 +19,11 @@ function nota_prova($id, $prova) {
 
 }
 
-function acesso_pagina($id, $url) {
+function acesso_pagina($id, $modulo) {
 	
 	global $wpdb;
 	
-	$query = "SELECT * FROM wpb9_acesso_gravado WHERE user_id = " . $id . " AND slug ='" . $url . "' LIMIT 1";
+	$query = "SELECT " . $modulo . " FROM " . $wpdb->prefix.'acesso_gravado' . " WHERE user_id = " . $id;
 	$row = $wpdb->get_row($query, ARRAY_A);
 
 	foreach ($row as $key => $val) {

@@ -45,17 +45,9 @@ function global_admin_page()
 			fputcsv($outstream, $fields);
 
 			$values = array();
-		
+	
 			$blogusers = get_users( array( 'role__in' => array( 'um_profissional-de-saude', 'um_gestor-de-saude' ), 'orderby' => 'ID', 'order' => 'ASC', ) );
 			foreach ( $blogusers as $user ) {
-
-				$time = get_user_meta($user->ID, 'wp-last-login',true);
-
-				if($time == 0){
-					$date = "-";
-				} else {
-					$date = gmdate("d/m/Y H:i:s", get_user_meta($user->ID, 'wp-last-login',true));
-				}
 
 				$values[] = array(
 					$user->ID,
@@ -66,23 +58,23 @@ function global_admin_page()
 					get_user_meta($user->ID, 'uf',true),
 					get_user_meta($user->ID, 'cidade',true),
 					get_user_meta($user->ID, 'telefone',true),
-					$date,
-					acesso_pagina($user->ID, "cgm-masters-m1"),
+					get_user_meta($user->ID, 'data_entrada',true),
+					acesso_pagina($user->ID, "mod1"),
 					nota_prova($user->ID, 1),
-					acesso_pagina($user->ID, "cgm-masters-m2"),
+					acesso_pagina($user->ID, "mod2"),
 					nota_prova($user->ID, 3),
-					acesso_pagina($user->ID, "cgm-masters-m3"),
+					acesso_pagina($user->ID, "mod3"),
 					nota_prova($user->ID, 4),
-					acesso_pagina($user->ID, "cgm-masters-m4"),
+					acesso_pagina($user->ID, "mod4"),
 					nota_prova($user->ID, 5),
-					acesso_pagina($user->ID, "cgm-masters-m5"),
+					acesso_pagina($user->ID, "mod5"),
 					nota_prova($user->ID, 7),
-					acesso_pagina($user->ID, "cgm-masters-m6"),
+					acesso_pagina($user->ID, "mod6"),
 					nota_prova($user->ID, 8),
-					acesso_pagina($user->ID, "diabetes-no-alvo-edicao-2021"),
-					acesso_pagina($user->ID, "cgm-masters-m1-2022"),
-					acesso_pagina($user->ID, "paapcd-m1-2022"),
-					acesso_pagina($user->ID, "cgm-masters-m2-2022"),
+					acesso_pagina($user->ID, "mod7"),
+					acesso_pagina($user->ID, "mod8"),
+					acesso_pagina($user->ID, "mod9"),
+					acesso_pagina($user->ID, "mod10"),
 				);
 			};
 
